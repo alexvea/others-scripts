@@ -126,7 +126,7 @@ event () {
                           "traefik")
                                   case $event_type in
                                         "create")
-                                                echo "ajout des network internes ▒traefik"
+                                                echo "ajout des network internes traefik"
                                                 for network_id in `docker network ls | grep "_internal" | awk '{print $1}'`
                                                 do
                                                         docker network connect $network_id traefik
